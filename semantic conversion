@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact YOUR NAME HERE</title>
+</head>
+<body>
+  <header>
+    <a href="/">My Site</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact me</h1>
+
+    <form action="#" method="post">
+      <!-- STEP 7 -->
+      <fieldset>
+        <legend>About you</legend>
+
+        <label for="fullname">Full name</label>
+        <input type="text" id="fullname" name="fullname" required placeholder="e.g. Amira Okoro">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone">
+      </fieldset>
+
+      <!-- STEP 8 -->
+      <fieldset>
+        <legend>Your message</legend>
+
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject" required>
+          <option value="" disabled selected>Choose a subject</option>
+          <option value="general">General Inquiry</option>
+          <option value="support">Support</option>
+          <option value="feedback">Feedback</option>
+        </select>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required minlength="30"></textarea>
+
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter">Subscribe to newsletter</label>
+      </fieldset>
+
+      <!-- STEP 9 -->
+      <button type="submit">Send message</button>
+    </form>
+  </main>
+
+  <!-- STEP 10: same footer -->
+  <footer>
+    <small>© 2025</small>
+  </footer>
+</body>
+</html>
