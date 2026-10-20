@@ -1,74 +1,501 @@
 
-/* Reset default browser spacing */
+/* ========================================
+   WEEK 2: CSS MASTERY
+   Portfolio Stylesheet
+   ======================================== */
+
+/* 1. CSS Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Page styling */
-body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #1c2128;
-    background-color: #f6f8fa;
+/* 2. Typography and Color Variables */
+:root {
+    --color-primary: #1f6feb;
+    --color-secondary: #6f42c1;
+    --color-background: #f6f8fa;
+    --color-text: #1c2128;
+    --color-muted: #656d76;
+    --color-primary-light: #ddf4ff;
+    --color-primary-dark: #1158c7;
+    --color-white: #ffffff;
+    --color-border: #d0d7de;
+    --color-danger: #d93025;
+
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-base: 1rem;
+    --font-lg: 1.125rem;
+    --font-xl: 1.25rem;
+    --font-2xl: 1.5rem;
+    --font-3xl: 1.875rem;
+    --font-4xl: 2.25rem;
 }
 
-/* Headings */
+/* 3. Base Page Styling */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: var(--font-base);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
 h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+    font-size: var(--font-4xl);
 }
 
 h2 {
-    font-size: 30px;
-    margin-bottom: 16px;
+    font-size: var(--font-3xl);
 }
 
 h3 {
-    font-size: 24px;
-    margin-bottom: 12px;
+    font-size: var(--font-2xl);
 }
 
 h4 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: var(--font-xl);
 }
 
 h5 {
-    font-size: 18px;
-    margin-bottom: 8px;
+    font-size: var(--font-lg);
 }
 
 h6 {
-    font-size: 16px;
-    margin-bottom: 8px;
+    font-size: var(--font-base);
 }
 
-/* Paragraphs */
 p {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 }
 
-/* Links */
+small {
+    font-size: var(--font-sm);
+    color: var(--color-muted);
+}
+
+/* 4. Links */
 a {
-    color: #1f6feb;
+    color: var(--color-primary);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
+    color: var(--color-primary-dark);
     text-decoration: underline;
 }
 
-/* Images */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+/* 5. Images */
 img {
+    display: block;
     max-width: 100%;
     height: auto;
 }
 
-/* Buttons */
-button {
+/* 6. Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 5%;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    list-style: none;
+}
+
+nav a {
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* 7. Main Content */
+main {
+    width: min(1100px, 90%);
+    margin: 2rem auto;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+article {
+    margin-bottom: 2rem;
+}
+
+/* 8. Buttons */
+button,
+.button,
+input[type="submit"] {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border: 2px solid var(--color-primary);
+    border-radius: 6px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
     font: inherit;
+    font-weight: 600;
+    text-align: center;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+button:hover,
+.button:hover,
+input[type="submit"]:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px #00000020;
+}
+
+.button-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+}
+
+.button-secondary:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+}
+
+.button-danger {
+    background-color: var(--color-danger);
+    border-color: var(--color-danger);
+}
+
+button:disabled {
+    background-color: #cccccc;
+    border-color: #cccccc;
+    color: #555555;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* 9. Cards */
+.card,
+.project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: var(--color-white);
+    box-shadow: 0 2px 8px #0000000d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover,
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #00000015;
+}
+
+.card h3,
+.project-card h3 {
+    margin-bottom: 0.75rem;
+}
+
+.card p,
+.project-card p {
+    color: var(--color-muted);
+}
+
+.card .button,
+.project-card .button {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* 10. Responsive Project Grid */
+.project-grid,
+.card-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+/* 11. Box Model Practice */
+.box {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid var(--color-primary);
+    background-color: var(--color-primary-light);
+}
+
+.broken-box {
+    width: 300px;
+    max-width: 100%;
+    padding: 20px;
+    border: none;
+    box-sizing: border-box;
+}
+
+.practice-card {
+    width: 300px;
+    max-width: 100%;
+    padding: 20px;
+    border: 1px solid gray;
+    box-sizing: border-box;
+}
+
+.practice-card img {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.practice-card h3 {
+    margin-bottom: 15px;
+}
+
+/* 12. Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    background-color: var(--color-white);
+    color: var(--color-text);
+    font: inherit;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--color-primary);
+}
+
+input:invalid,
+textarea:invalid {
+    border-color: var(--color-danger);
+}
+
+.error-message {
+    color: var(--color-danger);
+    font-size: var(--font-sm);
+}
+
+/* 13. Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    min-height: 70vh;
+    padding: 3rem 5%;
+    background-color: var(--color-primary-light);
+    border-radius: 10px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 450px;
+    border-radius: 10px;
+}
+
+/* 14. Photo Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.gallery figure {
+    margin: 0;
+}
+
+.gallery img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gallery figcaption {
+    padding: 0.5rem 0;
+    color: var(--color-muted);
+    font-size: var(--font-sm);
+}
+
+/* 15. Magazine Layout */
+.magazine-layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
+}
+
+.magazine-header,
+.magazine-footer {
+    grid-column: 1 / -1;
+}
+
+/* 16. Footer */
+footer {
+    padding: 2rem 5%;
+    background-color: var(--color-text);
+    color: var(--color-white);
+    text-align: center;
+}
+
+footer a {
+    color: var(--color-white);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+/* 17. Responsive Layout: Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .project-grid,
+    .card-row,
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* 18. Responsive Layout: Mobile */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        gap: 0.75rem;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    .project-grid,
+    .card-row,
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        flex-direction: column;
+        min-height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .magazine-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .practice-card,
+    .broken-box {
+        width: 100%;
+    }
+}
+
+/* 19. Large Screens */
+@media (min-width: 1280px) {
+    main {
+        width: min(1200px, 90%);
+    }
+}
+
+/* 20. Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
 }
