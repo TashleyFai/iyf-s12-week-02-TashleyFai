@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magazine Layout | Faith's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .magazine {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-template-areas:
+        "header header"
+        "main sidebar"
+        "story-one story-two"
+        "footer footer";
+      gap: 20px;
+    }
+
+    .magazine-header {
+      grid-area: header;
+      padding: 30px;
+      background: #1f6feb;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .magazine-header h1 {
+      color: white;
+      margin-bottom: 10px;
+    }
+
+    .magazine-main {
+      grid-area: main;
+    }
+
+    .magazine-sidebar {
+      grid-area: sidebar;
+    }
+
+    .story-one {
+      grid-area: story-one;
+    }
+
+    .story-two {
+      grid-area: story-two;
+    }
+
+    .magazine-card {
+      padding: 20px;
+      background: white;
+      border: 1px solid #d0d7de;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+    }
+
+    .magazine-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 12px;
+    }
+
+    .magazine-card h2,
+    .magazine-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .magazine-footer {
+      grid-area: footer;
+      padding: 20px;
+      background: #1c2128;
+      color: white;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .magazine-footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 767px) {
+      .magazine {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "main"
+          "sidebar"
+          "story-one"
+          "story-two"
+          "footer";
+      }
+
+      .magazine-header {
+        padding: 20px;
+      }
+
+      .magazine-card img {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="magazine">
+      <header class="magazine-header">
+        <h1>The Creative Journal</h1>
+        <p>Ideas, technology, creativity and everyday inspiration</p>
+      </header>
+
+      <article class="magazine-card magazine-main">
+        <img
+          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+          alt="Laptop and workspace used for web development">
+        <h2>Building a Future with Web Development</h2>
+        <p>Learning HTML and CSS is the beginning of creating useful, accessible and beautiful websites. With regular practice, small projects can grow into valuable skills.</p>
+        <a href="projects.html">Explore my projects</a>
+      </article>
+
+      <aside class="magazine-card magazine-sidebar">
+        <h2>Editor's Picks</h2>
+        <h3>Learn Something New</h3>
+        <p>Practise a little every day and build your confidence one skill at a time.</p>
+        <h3>Design with Purpose</h3>
+        <p>Good layouts help visitors find information easily on phones and computers.</p>
+      </aside>
+
+      <article class="magazine-card story-one">
+        <img
+          src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+          alt="Person working on a laptop">
+        <h3>Technology and Learning</h3>
+        <p>Online resources make it easier to explore new ideas and practise practical skills.</p>
+      </article>
+
+      <article class="magazine-card story-two">
+        <img
+          src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80"
+          alt="Notebook and writing materials on a desk">
+        <h3>Make Time for Creativity</h3>
+        <p>Planning, experimenting and reflecting can turn an idea into a finished project.</p>
+      </article>
+
+      <footer class="magazine-footer">
+        <p>&copy; 2026 Faith (TashleyFai). Magazine layout practice.</p>
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
