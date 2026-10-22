@@ -26,12 +26,13 @@
 }
 
 /* 2. Page styling */
+
 body {
     font-family: Arial, sans-serif;
-    font-size: 16px;
+    font-size: var(--font-base);
     line-height: 1.6;
-    color: #1c2128;
-    background-color: #f6f8fa;
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
 /* 3. Headings */
