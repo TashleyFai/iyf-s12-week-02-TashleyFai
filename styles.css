@@ -1,5 +1,6 @@
-/* Week 2: Typography and color variables */
+/* 1. TYPOGRAPHY AND COLOR VARIABLES */
 :root {
+    /* Typography scale */
     --font-xs: 0.75rem;
     --font-sm: 0.875rem;
     --font-base: 1rem;
@@ -9,23 +10,47 @@
     --font-3xl: 1.875rem;
     --font-4xl: 2.25rem;
 
+    /* Colors */
     --color-primary: #1f6feb;
     --color-primary-light: #dbeafe;
     --color-primary-dark: #1158c7;
     --color-secondary: #7c3aed;
     --color-background: #f6f8fa;
+    --color-surface: #ffffff;
     --color-text: #1c2128;
     --color-muted: #6b7280;
+    --color-border: #d0d7de;
+    --color-danger: #dc2626;
+
+    /* Spacing and layout */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+
+    --radius-sm: 5px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+
+    --shadow-card: 0 4px 10px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.12);
+
+    --transition: 0.3s ease;
 }
 
-/* 1. Reset */
+/* 2. RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 2. Page styling */
+/* 3. BASE PAGE STYLES */
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -35,173 +60,424 @@ body {
     background-color: var(--color-background);
 }
 
-/* 3. Headings */
-h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 30px;
-    margin-bottom: 16px;
-}
-
-h3 {
-    font-size: 24px;
-    margin-bottom: 12px;
-}
-
-h4 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-h5 {
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
-h6 {
-    font-size: 16px;
-    margin-bottom: 8px;
-}
-
-/* 4. Paragraphs */
-p {
-    margin-bottom: 16px;
-}
-
-/* 5. Links */
-a {
-    color: #1f6feb;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* 6. Images */
 img {
+    display: block;
     max-width: 100%;
     height: auto;
 }
 
-/* 7. Navigation */
+ul,
+ol {
+    padding-left: var(--space-xl);
+}
+
+li {
+    margin-bottom: var(--space-xs);
+}
+
+/* 4. HEADINGS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-text);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: var(--font-4xl);
+    margin-bottom: var(--space-lg);
+}
+
+h2 {
+    font-size: var(--font-3xl);
+    margin-bottom: var(--space-md);
+}
+
+h3 {
+    font-size: var(--font-2xl);
+    margin-bottom: var(--space-sm);
+}
+
+h4 {
+    font-size: var(--font-xl);
+    margin-bottom: var(--space-sm);
+}
+
+h5 {
+    font-size: var(--font-lg);
+    margin-bottom: var(--space-sm);
+}
+
+h6 {
+    font-size: var(--font-base);
+    margin-bottom: var(--space-sm);
+}
+
+p {
+    margin-bottom: var(--space-md);
+}
+
+/* 5. LINKS */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+/* 6. NAVIGATION — FLEXBOX */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px;
-    background-color: white;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    padding: var(--space-md) 5%;
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+nav h3 {
+    margin-bottom: 0;
+    color: var(--color-primary);
 }
 
 nav ul {
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: var(--space-lg);
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-/* 8. Main content */
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: inline-block;
+    padding: var(--space-xs) 0;
+    font-weight: 600;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* 7. MAIN CONTENT */
 main {
     width: 90%;
     max-width: 1100px;
-    margin: 30px auto;
+    margin: var(--space-2xl) auto;
 }
 
 section {
-    margin-bottom: 30px;
+    margin-bottom: var(--space-2xl);
 }
 
-/* 9. Buttons */
+section p {
+    max-width: 70ch;
+}
+
+/* 8. BUTTONS */
 button,
 .button {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #1f6feb;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 0.7rem 1.25rem;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    border: 2px solid var(--color-primary);
+    border-radius: var(--radius-sm);
+    font: inherit;
+    font-weight: 600;
+    text-align: center;
     text-decoration: none;
+    cursor: pointer;
+    transition:
+        background-color var(--transition),
+        color var(--transition),
+        transform var(--transition),
+        box-shadow var(--transition);
 }
 
 button:hover,
 .button:hover {
-    background-color: #1158c7;
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
 }
 
-/* 10. Project cards */
+.button-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+}
+
+.button-secondary:hover {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary-dark);
+}
+
+.button-danger {
+    background-color: var(--color-danger);
+    border-color: var(--color-danger);
+}
+
+button:disabled,
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* 9. PROJECT CARDS — CSS GRID */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-lg);
 }
 
 .project-card {
-    padding: 20px;
-    background-color: white;
-    border: 1px solid #d0d7de;
-    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-lg);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
 }
 
 .project-card:hover {
-    box-shadow: 0 4px 10px #00000015;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
 }
 
-/* 11. Forms */
-input,
-textarea {
+.project-card img {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 12px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    font: inherit;
+    margin-bottom: var(--space-md);
+    border-radius: var(--radius-sm);
+    object-fit: cover;
 }
 
-/* 12. Footer */
+.project-card h2,
+.project-card h3 {
+    margin-bottom: var(--space-sm);
+}
+
+.project-card p {
+    flex-grow: 1;
+}
+
+.project-card .button {
+    align-self: flex-start;
+    margin-top: var(--space-sm);
+}
+
+/* 10. GENERAL CARDS */
+.card {
+    padding: var(--space-lg);
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    transition: box-shadow var(--transition);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+/* 11. FORMS */
+form {
+    width: 100%;
+    max-width: 650px;
+}
+
+fieldset {
+    padding: var(--space-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+legend {
+    padding: 0 var(--space-sm);
+    font-weight: 700;
+}
+
+label {
+    display: block;
+    margin-bottom: var(--space-xs);
+    font-weight: 600;
+}
+
+input,
+textarea,
+select {
+    display: block;
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font: inherit;
+    transition: border-color var(--transition);
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--color-primary);
+}
+
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+    border-color: var(--color-danger);
+}
+
+/* 12. FOOTER */
 footer {
-    padding: 20px;
-    background-color: #1c2128;
-    color: white;
+    padding: var(--space-xl) 5%;
+    background-color: var(--color-text);
+    color: #ffffff;
     text-align: center;
 }
 
-/* 13. Tablet */
-@media (max-width: 1023px) {
+footer p {
+    margin-bottom: 0;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+footer a:hover {
+    color: var(--color-primary-light);
+}
+
+/* 13. TABLET — 2 PROJECT COLUMNS */
+@media (min-width: 768px) and (max-width: 1023px) {
     .project-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    main {
+        width: 92%;
     }
 }
 
-/* 14. Mobile */
+/* 14. MOBILE — 1 PROJECT COLUMN */
 @media (max-width: 767px) {
     h1 {
-        font-size: 30px;
+        font-size: var(--font-3xl);
+    }
+
+    h2 {
+        font-size: var(--font-2xl);
+    }
+
+    h3 {
+        font-size: var(--font-xl);
     }
 
     nav {
         flex-direction: column;
-        gap: 12px;
+        align-items: center;
+        gap: var(--space-md);
     }
 
     nav ul {
         justify-content: center;
-        gap: 12px;
+        gap: var(--space-md);
+    }
+
+    nav a {
+        padding: var(--space-xs);
+    }
+
+    main {
+        width: 92%;
+        margin: var(--space-xl) auto;
     }
 
     .project-grid {
         grid-template-columns: 1fr;
     }
+
+    .project-card {
+        width: 100%;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    fieldset {
+        padding: var(--space-md);
+    }
+
+    button,
+    .button {
+        max-width: 100%;
+    }
 }
 
-/* 15. Keyboard focus */
-a:focus,
-button:focus,
-input:focus,
-textarea:focus {
-    outline: 2px solid #1f6feb;
-    outline-offset: 2px;
+/* 15. DESKTOP — LARGE SCREENS */
+@media (min-width: 1024px) {
+    main {
+        max-width: 1100px;
+    }
+}
+
+@media (min-width: 1280px) {
+    main {
+        max-width: 1200px;
+    }
+}
+
+/* 16. KEYBOARD ACCESSIBILITY */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--color-secondary);
+    outline-offset: 3px;
+}
+
+/* 17. REDUCED MOTION ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
 }
