@@ -1,39 +1,48 @@
-Faith's Portfolio — Week 2 CSS Mastery
+# Faith's Portfolio — Week 2 CSS Mastery
 
-About the Project
+## About the Project
 
-This is my personal portfolio website, created as part of the IYF Season 12 Week 2 CSS Mastery assignment. It showcases my HTML and CSS skills as I learn web development.
+This is my personal portfolio website, created for the IYF Season 12 Week 2 CSS Mastery assignment. It demonstrates my HTML and CSS skills, including responsive layouts, the CSS Box Model, Flexbox, CSS Grid, and accessibility improvements.
 
-Pages
+## Live Website
 
-- Home: Introduction to my portfolio.
-- About: Information about me, my skills, and my learning goals.
-- Projects: Examples of projects I have worked on while learning.
-- Contact: A contact form for visitors.
+[Visit Faith's Portfolio](https://tashleyfai.github.io/iyf-s12-week-02-TashleyFai/)
 
-CSS Features
+## Pages
 
-- CSS variables for consistent colours, spacing, and styling.
-- Flexbox for navigation and page layouts.
-- CSS Grid for displaying project cards.
-- Responsive design for mobile phones and larger screens.
+- [Home](index.html)
+- [About Me](about.html)
+- [Projects](projects.html)
+- [Contact](contact.html)
+- [Box Model Practice](box-model-practice.html)
+
+## CSS Features
+
+- CSS variables for consistent colours and styling.
+- Responsive navigation and page layouts.
+- Flexbox for navigation and flexible layouts.
+- CSS Grid for project cards.
+- Responsive design for mobile phones, tablets, and desktop screens.
 - Hover effects and transitions.
 - Keyboard focus styles for accessibility.
 - Styled form inputs and buttons.
+- CSS Box Model examples showing content, padding, borders, margins, and box sizing.
+- A product card demonstrating image sizing, spacing, and borders.
 
-Technologies Used
+## Technologies Used
 
 - HTML5
 - CSS3
-- GitHub
+- Git and GitHub
 - GitHub Pages
 
-Live Website
+## Learning Outcomes
 
-"Visit Faith's Portfolio" (https://tashleyfai.github.io/iyf-s12-week-02-TashleyFai/)
+Through this assignment, I practised styling web pages with CSS, creating reusable design styles, building responsive layouts with Flexbox and Grid, applying the CSS Box Model, and improving keyboard accessibility.
 
-Author
+## Author
 
 Faith (TashleyFai)
 
 This project is part of my journey toward becoming a skilled software developer.
+
