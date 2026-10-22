@@ -1,3 +1,22 @@
+/* Week 2: Typography and color variables */
+:root {
+    --font-xs: 0.75rem;
+    --font-sm: 0.875rem;
+    --font-base: 1rem;
+    --font-lg: 1.125rem;
+    --font-xl: 1.25rem;
+    --font-2xl: 1.5rem;
+    --font-3xl: 1.875rem;
+    --font-4xl: 2.25rem;
+
+    --color-primary: #1f6feb;
+    --color-primary-light: #dbeafe;
+    --color-primary-dark: #1158c7;
+    --color-secondary: #7c3aed;
+    --color-background: #f6f8fa;
+    --color-text: #1c2128;
+    --color-muted: #6b7280;
+}
 
 /* 1. Reset */
 * {
