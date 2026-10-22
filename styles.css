@@ -1,6 +1,7 @@
-/* 1. TYPOGRAPHY AND COLOR VARIABLES */
+/* WEEK 2 CSS MASTERY — FAITH'S PORTFOLIO */
+
+/* 1. TYPOGRAPHY, COLORS AND SPACING */
 :root {
-    /* Typography scale */
     --font-xs: 0.75rem;
     --font-sm: 0.875rem;
     --font-base: 1rem;
@@ -10,7 +11,6 @@
     --font-3xl: 1.875rem;
     --font-4xl: 2.25rem;
 
-    /* Colors */
     --color-primary: #1f6feb;
     --color-primary-light: #dbeafe;
     --color-primary-dark: #1158c7;
@@ -21,8 +21,8 @@
     --color-muted: #6b7280;
     --color-border: #d0d7de;
     --color-danger: #dc2626;
+    --color-success: #15803d;
 
-    /* Spacing and layout */
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
@@ -36,28 +36,26 @@
 
     --shadow-card: 0 4px 10px rgba(0, 0, 0, 0.08);
     --shadow-hover: 0 10px 20px rgba(0, 0, 0, 0.12);
-
     --transition: 0.3s ease;
 }
 
-/* 2. RESET */
+/* 2. RESET AND BASE STYLES */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 3. BASE PAGE STYLES */
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: var(--font-base);
     line-height: 1.6;
     color: var(--color-text);
-    background-color: var(--color-background);
+    background: var(--color-background);
 }
 
 img {
@@ -75,13 +73,8 @@ li {
     margin-bottom: var(--space-xs);
 }
 
-/* 4. HEADINGS */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* 3. TYPOGRAPHY */
+h1, h2, h3, h4, h5, h6 {
     color: var(--color-text);
     font-weight: 700;
     line-height: 1.2;
@@ -121,7 +114,15 @@ p {
     margin-bottom: var(--space-md);
 }
 
-/* 5. LINKS */
+small {
+    font-size: var(--font-sm);
+}
+
+.muted {
+    color: var(--color-muted);
+}
+
+/* 4. LINKS */
 a {
     color: var(--color-primary);
     text-decoration: none;
@@ -133,15 +134,15 @@ a:hover {
     text-decoration: underline;
 }
 
-/* 6. NAVIGATION — FLEXBOX */
+/* 5. FLEXBOX NAVIGATION */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: var(--space-md);
     flex-wrap: wrap;
+    gap: var(--space-md);
     padding: var(--space-md) 5%;
-    background-color: var(--color-surface);
+    background: var(--color-surface);
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -152,8 +153,8 @@ nav h3 {
 
 nav ul {
     display: flex;
-    align-items: center;
     justify-content: flex-end;
+    align-items: center;
     flex-wrap: wrap;
     gap: var(--space-lg);
     list-style: none;
@@ -175,7 +176,7 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* 7. MAIN CONTENT */
+/* 6. MAIN CONTENT */
 main {
     width: 90%;
     max-width: 1100px;
@@ -190,30 +191,32 @@ section p {
     max-width: 70ch;
 }
 
-/* 8. BUTTONS */
+/* 7. FOUR BUTTON STYLES */
 button,
-.button {
+.button,
+.btn {
     display: inline-block;
     padding: 0.7rem 1.25rem;
-    background-color: var(--color-primary);
-    color: #ffffff;
     border: 2px solid var(--color-primary);
     border-radius: var(--radius-sm);
+    background: var(--color-primary);
+    color: #ffffff;
     font: inherit;
     font-weight: 600;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    transition:
-        background-color var(--transition),
-        color var(--transition),
-        transform var(--transition),
-        box-shadow var(--transition);
+    transition: background-color var(--transition),
+                color var(--transition),
+                border-color var(--transition),
+                transform var(--transition),
+                box-shadow var(--transition);
 }
 
 button:hover,
-.button:hover {
-    background-color: var(--color-primary-dark);
+.button:hover,
+.btn:hover {
+    background: var(--color-primary-dark);
     border-color: var(--color-primary-dark);
     color: #ffffff;
     text-decoration: none;
@@ -221,30 +224,58 @@ button:hover,
     box-shadow: var(--shadow-card);
 }
 
-.button-secondary {
-    background-color: transparent;
+.btn-primary,
+.button-primary {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #ffffff;
+}
+
+/* Secondary outline button */
+.button-secondary,
+.btn-secondary {
+    background: transparent;
+    border-color: var(--color-primary);
     color: var(--color-primary);
 }
 
-.button-secondary:hover {
-    background-color: var(--color-primary-light);
+.button-secondary:hover,
+.btn-secondary:hover {
+    background: var(--color-primary-light);
+    border-color: var(--color-primary-dark);
     color: var(--color-primary-dark);
 }
 
-.button-danger {
-    background-color: var(--color-danger);
+/* Danger button */
+.button-danger,
+.btn-danger {
+    background: var(--color-danger);
     border-color: var(--color-danger);
+    color: #ffffff;
 }
 
+.button-danger:hover,
+.btn-danger:hover {
+    background: #b91c1c;
+    border-color: #b91c1c;
+    color: #ffffff;
+}
+
+/* Disabled button */
 button:disabled,
-.button:disabled {
-    opacity: 0.5;
+.button:disabled,
+.btn:disabled,
+.btn-disabled {
+    background: #d1d5db;
+    border-color: #d1d5db;
+    color: #6b7280;
+    opacity: 0.8;
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
 }
 
-/* 9. PROJECT CARDS — CSS GRID */
+/* 8. RESPONSIVE PROJECT GRID */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -254,14 +285,14 @@ button:disabled,
 .project-card {
     display: flex;
     flex-direction: column;
+    min-width: 0;
     padding: var(--space-lg);
-    background-color: var(--color-surface);
+    background: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-card);
-    transition:
-        transform var(--transition),
-        box-shadow var(--transition);
+    transition: transform var(--transition),
+                box-shadow var(--transition);
 }
 
 .project-card:hover {
@@ -290,20 +321,45 @@ button:disabled,
     margin-top: var(--space-sm);
 }
 
-/* 10. GENERAL CARDS */
+/* 9. REUSABLE CARDS */
 .card {
     padding: var(--space-lg);
-    background-color: var(--color-surface);
+    background: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
-    transition: box-shadow var(--transition);
+    transition: transform var(--transition),
+                box-shadow var(--transition);
 }
 
 .card:hover {
+    transform: translateY(-3px);
     box-shadow: var(--shadow-hover);
 }
 
-/* 11. FORMS */
+.card img {
+    width: 100%;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-md);
+}
+
+.card-tags,
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+.tag {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 20px;
+    background: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    font-size: var(--font-sm);
+}
+
+/* 10. FORMS AND VALIDATION */
 form {
     width: 100%;
     max-width: 650px;
@@ -331,14 +387,16 @@ textarea,
 select {
     display: block;
     width: 100%;
+    min-width: 0;
     padding: 0.7rem;
     margin-bottom: var(--space-md);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-sm);
-    background-color: var(--color-surface);
+    background: var(--color-surface);
     color: var(--color-text);
     font: inherit;
-    transition: border-color var(--transition);
+    transition: border-color var(--transition),
+                box-shadow var(--transition);
 }
 
 textarea {
@@ -350,6 +408,7 @@ input:focus,
 textarea:focus,
 select:focus {
     border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-primary-light);
 }
 
 input:invalid:not(:placeholder-shown),
@@ -357,12 +416,81 @@ textarea:invalid:not(:placeholder-shown) {
     border-color: var(--color-danger);
 }
 
-/* 12. FOOTER */
+input:valid:not(:placeholder-shown) {
+    border-color: var(--color-success);
+}
+
+/* 11. HERO SECTION */
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: var(--space-2xl) var(--space-lg);
+    text-align: center;
+    background-color: #1c2128;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    isolation: isolate;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.hero h1,
+.hero h2,
+.hero p {
+    color: #ffffff;
+}
+
+.hero p {
+    max-width: 65ch;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--space-xl);
+    width: 100%;
+    max-width: 1100px;
+}
+
+.hero-content img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+}
+
+/* 12. FLEXBOX HELPERS */
+.flex-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+/* 13. RESPONSIVE MULTI-COLUMN FOOTER */
 footer {
     padding: var(--space-xl) 5%;
-    background-color: var(--color-text);
+    background: var(--color-text);
     color: #ffffff;
-    text-align: center;
 }
 
 footer p {
@@ -377,9 +505,107 @@ footer a:hover {
     color: var(--color-primary-light);
 }
 
-/* 13. TABLET — 2 PROJECT COLUMNS */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-xl);
+    max-width: 1200px;
+    margin: 0 auto var(--space-xl);
+}
+
+.footer-grid h2,
+.footer-grid h3 {
+    color: #ffffff;
+    font-size: var(--font-lg);
+}
+
+.footer-grid ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-grid li {
+    margin-bottom: var(--space-sm);
+}
+
+.footer-bottom {
+    padding-top: var(--space-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    text-align: center;
+}
+
+/* 14. BOX MODEL PRACTICE */
+.box-practice {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--space-md);
+    margin: var(--space-lg) 0;
+}
+
+.practice-box {
+    max-width: 100%;
+    padding: var(--space-lg);
+    margin: var(--space-sm);
+    border: 3px solid var(--color-primary);
+    border-radius: var(--radius-md);
+    background: var(--color-primary-light);
+}
+
+.broken-box {
+    width: 300px;
+    max-width: 100%;
+    padding: 30px;
+    border: 5px solid var(--color-danger);
+    box-sizing: content-box;
+}
+
+.fixed-box {
+    width: 300px;
+    max-width: 100%;
+    padding: 30px;
+    border: 5px solid var(--color-success);
+    box-sizing: border-box;
+}
+
+.practice-card {
+    width: 300px;
+    max-width: 100%;
+    padding: var(--space-lg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+}
+
+.practice-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+}
+
+.practice-card h3 {
+    margin: var(--space-md) 0 var(--space-sm);
+}
+
+/* 15. KEYBOARD ACCESSIBILITY */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--color-secondary);
+    outline-offset: 3px;
+}
+
+/* 16. TABLET — TWO PROJECT COLUMNS */
 @media (min-width: 768px) and (max-width: 1023px) {
     .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
@@ -388,7 +614,7 @@ footer a:hover {
     }
 }
 
-/* 14. MOBILE — 1 PROJECT COLUMN */
+/* 17. MOBILE — ONE PROJECT COLUMN */
 @media (max-width: 767px) {
     h1 {
         font-size: var(--font-3xl);
@@ -423,7 +649,7 @@ footer a:hover {
     }
 
     .project-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
     }
 
     .project-card {
@@ -439,12 +665,26 @@ footer a:hover {
     }
 
     button,
-    .button {
+    .button,
+    .btn {
         max-width: 100%;
+    }
+
+    .hero {
+        min-height: 55vh;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
     }
 }
 
-/* 15. DESKTOP — LARGE SCREENS */
+/* 18. LARGE DESKTOP */
 @media (min-width: 1024px) {
     main {
         max-width: 1100px;
@@ -457,17 +697,7 @@ footer a:hover {
     }
 }
 
-/* 16. KEYBOARD ACCESSIBILITY */
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-    outline: 3px solid var(--color-secondary);
-    outline-offset: 3px;
-}
-
-/* 17. REDUCED MOTION ACCESSIBILITY */
+/* 19. REDUCED MOTION */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
