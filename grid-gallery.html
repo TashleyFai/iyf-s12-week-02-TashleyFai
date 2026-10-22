@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid Gallery | Faith's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .gallery figure {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery figure:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery figcaption {
+      padding: 12px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    @media (max-width: 767px) {
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        height: 220px;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>CSS Grid Photo Gallery</h1>
+    <p>This gallery demonstrates CSS Grid, responsive columns, image sizing, and spacing.</p>
+
+    <section class="gallery" aria-label="Six-image photo gallery">
+      <figure>
+        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80" alt="Mountain landscape beside a lake">
+        <figcaption>Mountain Views</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80" alt="Sunlight shining through a green forest">
+        <figcaption>Green Forest</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Beautiful open landscape">
+        <figcaption>Open Landscape</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="Lake surrounded by mountains">
+        <figcaption>Peaceful Lake</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=800&q=80" alt="Golden sunrise over a landscape">
+        <figcaption>Golden Sunrise</figcaption>
+      </figure>
+
+      <figure>
+        <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=80" alt="Wildlife in a natural environment">
+        <figcaption>Wildlife</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Faith (TashleyFai). All rights reserved.</p>
+  </footer>
+</body>
+</html>
