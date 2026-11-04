@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Box Model Practice | Faith's Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+
   <style>
     .box-practice {
       display: flex;
@@ -15,24 +16,46 @@
 
     .practice-box {
       padding: 20px;
-      border: 3px solid #2563eb;
-      margin: 10px;
       background: #dbeafe;
       border-radius: 8px;
+      margin: 10px;
+    }
+
+    .content-example {
+      background: #eff6ff;
+    }
+
+    .padding-example {
+      border: 3px solid #2563eb;
+    }
+
+    .border-example {
+      border: 5px solid #15803d;
+    }
+
+    .margin-example {
+      margin: 25px;
+      border: 2px dashed #7c3aed;
     }
 
     .broken-box {
       width: 300px;
-      padding: 30px;
-      border: 5px solid #dc2626;
+      max-width: none;
+      padding: 20px;
+      border: none;
       box-sizing: content-box;
+      background: #fee2e2;
+      margin-bottom: 20px;
     }
 
     .fixed-box {
       width: 300px;
-      padding: 30px;
-      border: 5px solid #15803d;
+      max-width: 100%;
+      padding: 20px;
+      border: 1px solid #15803d;
       box-sizing: border-box;
+      background: #dcfce7;
+      margin-bottom: 20px;
     }
 
     .practice-card {
@@ -47,6 +70,7 @@
     }
 
     .practice-card img {
+      display: block;
       width: 100%;
       height: 160px;
       object-fit: cover;
@@ -54,7 +78,7 @@
     }
 
     .practice-card h3 {
-      margin: 16px 0 8px;
+      margin: 15px 0;
     }
 
     .practice-card p {
@@ -71,6 +95,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <nav>
@@ -87,30 +112,60 @@
 
     <section>
       <h2>1. Four Box Model Examples</h2>
+
       <div class="box-practice">
-        <div class="practice-box">Box 1: Content and padding</div>
-        <div class="practice-box">Box 2: Border</div>
-        <div class="practice-box">Box 3: Margin</div>
-        <div class="practice-box">Box 4: Background</div>
+        <div class="practice-box content-example">
+          Box 1: Content and background
+        </div>
+
+        <div class="practice-box padding-example">
+          Box 2: Padding and space inside
+        </div>
+
+        <div class="practice-box border-example">
+          Box 3: Border around the content
+        </div>
+
+        <div class="practice-box margin-example">
+          Box 4: Margin and outside spacing
+        </div>
       </div>
     </section>
 
     <section>
       <h2>2. Debugging Box Width</h2>
+
       <h3>Before: content-box</h3>
-      <div class="broken-box">This box becomes wider than 300px because padding and borders are added.</div>
+      <div class="broken-box">
+        This box has a 300px content width and 20px padding on each side.
+        Its total width is 340px.
+      </div>
 
       <h3>After: border-box</h3>
-      <div class="fixed-box">This box stays within a total width of 300px.</div>
+      <div class="fixed-box">
+        This box has a total width of 300px, including padding and border.
+      </div>
     </section>
 
     <section>
       <h2>3. Product Card Example</h2>
+
       <article class="practice-card">
-        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Wristwatch displayed as a product example">
+        <img
+          src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
+          alt="Wristwatch displayed as a product example"
+        >
+
         <h3>Everyday Wristwatch</h3>
-        <p>A simple example showing how padding, borders, image sizing, and margins work together in a card.</p>
-        <a class="practice-button" href="projects.html">View My Projects</a>
+
+        <p>
+          A simple example showing how padding, borders, image sizing,
+          and margins work together in a card.
+        </p>
+
+        <a class="practice-button" href="projects.html">
+          View My Projects
+        </a>
       </article>
     </section>
   </main>
