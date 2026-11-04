@@ -1,54 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Projects | Faith's Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects | Faith's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <header class="site-header">
 
-  <main class="container">
+        <a href="index.html" class="site-logo">Faith's Portfolio</a>
 
-    <section>
-      <h1>My Projects</h1>
-      <p>Welcome to my projects page. Here are some of the things I am learning to build.</p>
-    </section>
+        <button class="menu-icon"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="main-navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-    <section class="project-grid">
+        <nav class="site-nav" id="main-navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html" aria-current="page">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="box-model-practice.html">Box Model</a>
+            <a href="grid-gallery.html">Gallery</a>
+            <a href="magazine-layout.html">Magazine</a>
+        </nav>
 
-      <article class="project-card">
-        <h2>My First Website</h2>
-        <p>A simple website I created while learning HTML.</p>
-      </article>
+    </header>
 
-      <article class="project-card">
-        <h2>My Portfolio</h2>
-        <p>A personal website I am styling with CSS.</p>
-      </article>
+    <main class="container">
 
-      <article class="project-card">
-        <h2>My Learning Journey</h2>
-        <p>I am practising web design and responsive layouts.</p>
-      </article>
+        <section>
+            <h1>My Projects</h1>
 
-    </section>
+            <p>
+                Welcome to my projects page. Here are some of the things
+                I am learning to build.
+            </p>
+        </section>
 
-  </main>
+        <section class="project-grid">
 
-  <footer>
-    <p>&copy; 2026 Faith (TashleyFai). All rights reserved.</p>
-  </footer>
+            <article class="project-card">
+                <h2>My First Website</h2>
+                <p>A simple website I created while learning HTML.</p>
+            </article>
+
+            <article class="project-card">
+                <h2>My Portfolio</h2>
+                <p>A personal website I am styling with CSS.</p>
+            </article>
+
+            <article class="project-card">
+                <h2>My Learning Journey</h2>
+                <p>I am practising web design and responsive layouts.</p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Faith (TashleyFai). All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
