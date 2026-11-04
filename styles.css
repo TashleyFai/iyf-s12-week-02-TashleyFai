@@ -136,7 +136,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* 5. FLEXBOX NAVIGATION */
+/* 5. NAVIGATION */
 nav {
     display: flex;
     justify-content: space-between;
@@ -189,7 +189,7 @@ section p {
     max-width: 70ch;
 }
 
-/* 7. BUTTON STYLES */
+/* 7. BUTTONS */
 button, .button, .btn {
     display: inline-block;
     padding: 0.7rem 1.25rem;
@@ -368,7 +368,7 @@ textarea:invalid:not(:placeholder-shown) {
     border-color: var(--color-danger);
 }
 
-/* 11. CONTACT PAGE LAYOUT */
+/* 11. CONTACT LAYOUT */
 .contact-layout {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -476,7 +476,6 @@ footer a {
     background: var(--color-primary-light);
 }
 
-/* Broken box: total width is 340px */
 .broken-box {
     width: 300px;
     padding: 20px;
@@ -485,7 +484,6 @@ footer a {
     background: #fee2e2;
 }
 
-/* Fixed box: total width is exactly 300px */
 .fixed-box {
     width: 300px;
     padding: 20px;
@@ -494,7 +492,6 @@ footer a {
     background: #dcfce7;
 }
 
-/* Product card: total width is 300px */
 .practice-card {
     width: 300px;
     max-width: 100%;
@@ -569,20 +566,6 @@ select:focus-visible {
         font-size: var(--font-xl);
     }
 
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul {
-        justify-content: center;
-        gap: var(--space-md);
-    }
-
-    nav a {
-        padding: var(--space-xs);
-    }
-
     main {
         width: 92%;
         margin: var(--space-xl) auto;
@@ -652,19 +635,16 @@ select:focus-visible {
     }
 }
 
-/* MOBILE HAMBURGER MENU */
-
-.menu-toggle {
-    display: none;
-}
-
+/* 22. MOBILE HAMBURGER MENU */
 .menu-icon {
     display: none;
     flex-direction: column;
     gap: 5px;
-    width: 35px;
-    padding: 5px;
+    width: 40px;
+    padding: 8px;
     cursor: pointer;
+    border: none;
+    background: transparent;
 }
 
 .menu-icon span {
@@ -684,11 +664,11 @@ select:focus-visible {
         background: var(--color-surface);
     }
 
-    .menu-icon {
+    .site-header .menu-icon {
         display: flex;
     }
 
-    .site-nav {
+    .site-header .site-nav {
         display: none;
         flex-direction: column;
         align-items: stretch;
@@ -697,11 +677,11 @@ select:focus-visible {
         padding: 12px 0;
     }
 
-    .site-nav.active {
+    .site-header .site-nav.active {
         display: flex;
     }
 
-    .site-nav a {
+    .site-header .site-nav a {
         display: block;
         padding: 10px;
         text-align: center;
