@@ -1,67 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me | Faith's Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Faith's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <header class="site-header">
 
-  <main class="container">
+        <a href="index.html" class="site-logo">Faith's Portfolio</a>
 
-    <section>
-      <h1>About Me</h1>
+        <button class="menu-icon"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="main-navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-      <p>
-        Hello! I'm Faith, a beginner web developer learning how to
-        create websites using HTML and CSS.
-      </p>
+        <nav class="site-nav" id="main-navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html" aria-current="page">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="box-model-practice.html">Box Model</a>
+            <a href="grid-gallery.html">Gallery</a>
+            <a href="magazine-layout.html">Magazine</a>
+        </nav>
 
-      <p>
-        I'm building my skills in web design, responsive layouts,
-        and accessibility. My goal is to keep learning and create
-        useful, user-friendly websites.
-      </p>
-    </section>
+    </header>
 
-    <section>
-      <h2>My Skills</h2>
+    <main class="container">
 
-      <ul>
-        <li>HTML — creating webpage structure</li>
-        <li>CSS — styling and responsive layouts</li>
-        <li>GitHub — storing and managing my projects</li>
-        <li>Problem-solving and continuous learning</li>
-      </ul>
-    </section>
+        <section>
+            <h1>About Me</h1>
 
-    <section>
-      <h2>My Goal</h2>
+            <p>
+                Hello! I'm Faith, a beginner web developer learning how to
+                create websites using HTML and CSS.
+            </p>
 
-      <p>
-        I want to grow into a skilled software developer by
-        practising, building projects, and learning something new every day.
-      </p>
+            <p>
+                I'm building my skills in web design, responsive layouts,
+                and accessibility. My goal is to keep learning and create
+                useful, user-friendly websites.
+            </p>
+        </section>
 
-      <a class="button" href="projects.html">View My Projects</a>
-    </section>
+        <section>
+            <h2>My Skills</h2>
 
-  </main>
+            <ul>
+                <li>HTML — creating webpage structure</li>
+                <li>CSS — styling and responsive layouts</li>
+                <li>GitHub — storing and managing my projects</li>
+                <li>Problem-solving and continuous learning</li>
+            </ul>
+        </section>
 
-  <footer>
-    <p>&copy; 2026 Faith (TashleyFai). All rights reserved.</p>
-  </footer>
+        <section>
+            <h2>My Goal</h2>
+
+            <p>
+                I want to grow into a skilled software developer by
+                practising, building projects, and learning something new every day.
+            </p>
+
+            <a class="button" href="projects.html">View My Projects</a>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Faith (TashleyFai). All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
