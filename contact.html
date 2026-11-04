@@ -1,76 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me | Faith's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me | Faith's Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+      align-items: start;
+      margin-top: 24px;
+    }
+
+    .contact-form,
+    .contact-sidebar {
+      padding: 24px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font: inherit;
+    }
+
+    .contact-form textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      background: #2563eb;
+      color: white;
+      font: inherit;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background: #1d4ed8;
+    }
+
+    .contact-sidebar {
+      background: #f1f5f9;
+    }
+
+    @media (max-width: 767px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
+  <header>
     <nav>
-        <h3>Faith's Portfolio</h3>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
     </nav>
+  </header>
 
-    <main>
-        <section>
-            <h1>Contact Me</h1>
-            <p>Thank you for visiting my portfolio! If you would like to connect with me about my learning journey or projects, you can use the form below.</p>
-        </section>
+  <main class="container">
 
-        <section>
-            <h2>Send a Message</h2>
-     <form action="https://formsubmit.co/faithkips003@gmail.com" method="POST">
-            
-                <label for="name">Your Name</label>
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Enter your name"
-                    required
-                >
+    <section>
+      <h1>Contact Me</h1>
+      <p>
+        Thank you for visiting my portfolio! If you would like to connect
+        with me about my learning journey or projects, you can use the form below.
+      </p>
+    </section>
 
-                <label for="email">Your Email</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Enter your email address"
-                    required
-                >
+    <div class="contact-layout">
 
-                <label for="subject">Subject</label>
-                <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    placeholder="What would you like to discuss?"
-                    required
-                >
+      <section class="contact-form">
+        <h2>Send a Message</h2>
 
-                <label for="message">Your Message</label>
-                <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Write your message here"
-                    required
-                ></textarea>
+        <form action="https://formsubmit.co/faithkips003@gmail.com" method="POST">
 
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
+          <label for="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          >
 
-    <footer>
-        <p>&copy; 2026 Faith's Portfolio</p>
-    </footer>
+          <label for="email">Your Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email address"
+            required
+          >
+
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="What would you like to discuss?"
+            required
+          >
+
+          <label for="message">Your Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write your message here"
+            required
+          ></textarea>
+
+          <button type="submit">Send Message</button>
+
+        </form>
+      </section>
+
+      <aside class="contact-sidebar">
+        <h2>Let's Connect</h2>
+        <p>
+          I am learning web development and building practical projects.
+          I welcome feedback, ideas and opportunities to learn.
+        </p>
+
+        <h3>My Interests</h3>
+        <ul>
+          <li>Web Development</li>
+          <li>Technology</li>
+          <li>Creative Projects</li>
+          <li>Learning New Skills</li>
+        </ul>
+      </aside>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Faith (TashleyFai). All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
