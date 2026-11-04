@@ -1,26 +1,32 @@
-# Faith's Portfolio — IYF Season 12 Week 2 CSS Mastery
+Faith's Portfolio — IYF Season 12 Week 2 CSS Mastery
 
-## About the Project
+About the Project
 
 This is my personal portfolio website, created as part of the IYF Season 12 Week 2 CSS Mastery assignment.
 
 The project demonstrates my understanding of HTML and CSS through practical exercises involving typography, colours, the CSS Box Model, Flexbox, CSS Grid, and responsive web design.
 
-## Live Website
+Live Website
 
-[Visit Faith's Portfolio](https://tashleyfai.github.io/iyf-s12-week-02-TashleyFai/)
+"Visit Faith's Portfolio" (https://tashleyfai.github.io/iyf-s12-week-02-TashleyFai/)
 
-## Website Pages
+Website Pages
 
-- [Home](index.html)
-- [About Me](about.html)
-- [Projects](projects.html)
-- [Contact](contact.html)
-- [Box Model Practice](box-model-practice.html)
-- [CSS Grid Gallery](grid-gallery.html)
-- [Magazine Layout](magazine-layout.html)
+Live Website Pages
 
-## CSS Features
+- "Home" (https://tashleyfai.github.io/iyf-s12-week-02-TashleyFai/)
+- "About Me" (https://tashleyfai.github.io/iyf-s12-week-02-TashleyFai/about.html)
+- "Projects" (https://tashleyfai.github.io/iyf-s12-week-02-TashleyFai/projects.html)
+- "Contact" (https://tashleyfai.github.io/iyf-s12-week-02-TashleyFai/contact.html)
+- "Box Model Practice" (https://tashleyfai.github.io/iyf-s12-week-02-TashleyFai/box-model-practice.html)
+- "CSS Grid Gallery" (https://tashleyfai.github.io/iyf-s12-week-02-TashleyFai/grid-gallery.html)
+- "Magazine Layout" (https://tashleyfai.github.io/iyf-s12-week-02-TashleyFai/magazine-layout.html)
+
+Source Code
+
+"View all project files on GitHub" (https://github.com/TashleyFai/iyf-s12-week-02-TashleyFai)
+
+CSS Features
 
 - CSS custom properties for colours, typography, and spacing.
 - Typography and heading styles.
@@ -33,14 +39,14 @@ The project demonstrates my understanding of HTML and CSS through practical exer
 - Keyboard focus styles for accessibility.
 - Responsive image sizing.
 
-## Technologies Used
+Technologies Used
 
 - HTML5
 - CSS3
 - Git and GitHub
 - GitHub Pages
 
-## Learning Outcomes
+Learning Outcomes
 
 Through this assignment, I practised:
 
@@ -51,8 +57,8 @@ Through this assignment, I practised:
 - Using CSS variables for consistent styling.
 - Improving website accessibility and user experience.
 
-## Author
+Author
 
-**Faith (TashleyFai)**
+Faith (TashleyFai)
 
 This project is part of my learning journey toward becoming a skilled software developer.
