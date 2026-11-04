@@ -1,69 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Faith's Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faith's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <header class="site-header">
 
-  <main class="container">
+        <button class="menu-icon" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
-    <section class="hero">
+        <nav class="site-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="box-model-practice.html">Box Model</a>
+            <a href="grid-gallery.html">Gallery</a>
+            <a href="magazine-layout.html">Magazine</a>
+        </nav>
 
-      <div class="hero-content">
-        <h1>Hello, I'm Faith!</h1>
+    </header>
 
-        <p>
-          I am a beginner web developer learning how to create
-          websites using HTML and CSS.
-        </p>
+    <main class="container">
 
-        <p>
-          I enjoy solving problems, learning new technologies
-          and turning ideas into simple web projects.
-        </p>
+        <section class="hero">
 
-        <a class="button" href="projects.html">
-          View My Projects
-        </a>
-      </div>
+            <div class="hero-content">
 
-      <div class="hero-image">
-        <img
-          src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
-          alt="Laptop and workspace for web development"
-        >
-      </div>
+                <div>
+                    <h1>Hello, I'm Faith!</h1>
 
-    </section>
+                    <p>
+                        I am a beginner web developer learning how to create
+                        websites using HTML and CSS.
+                    </p>
 
-    <section>
-      <h2>My Learning Journey</h2>
+                    <p>
+                        I enjoy solving problems, learning new technologies
+                        and turning ideas into simple web projects.
+                    </p>
 
-      <p>
-        I enjoy learning how to build websites and make them
-        work on different screen sizes. Every project helps me
-        improve my skills and become a better developer.
-      </p>
-    </section>
+                    <a class="button" href="projects.html">
+                        View My Projects
+                    </a>
+                </div>
 
-  </main>
+                <div class="hero-image">
+                    <img
+                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
+                        alt="Laptop and workspace for web development"
+                    >
+                </div>
 
-  <footer>
-    <p>&copy; 2026 Faith (TashleyFai). All rights reserved.</p>
-  </footer>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>My Learning Journey</h2>
+
+            <p>
+                I enjoy learning how to build websites and make them
+                work on different screen sizes. Every project helps me
+                improve my skills and become a better developer.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Faith (TashleyFai). All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
