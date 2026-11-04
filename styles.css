@@ -651,3 +651,59 @@ select:focus-visible {
         animation-iteration-count: 1 !important;
     }
 }
+
+/* MOBILE HAMBURGER MENU */
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    width: 35px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--color-text);
+    border-radius: 3px;
+}
+
+@media (max-width: 767px) {
+    .site-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 12px 5%;
+        background: var(--color-surface);
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .site-nav {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 8px;
+        padding: 12px 0;
+    }
+
+    .site-nav.active {
+        display: flex;
+    }
+
+    .site-nav a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+    }
+}
