@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,14 +12,20 @@
 
     <header class="site-header">
 
-        <button class="menu-icon" aria-label="Toggle navigation" aria-expanded="false">
+        <a href="index.html" class="site-logo">Faith's Portfolio</a>
+
+        <button class="menu-icon"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+                aria-controls="main-navigation">
             <span></span>
             <span></span>
             <span></span>
         </button>
 
-        <nav class="site-nav">
-            <a href="index.html">Home</a>
+        <nav class="site-nav" id="main-navigation" aria-label="Main navigation">
+            <a href="index.html" aria-current="page">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
             <a href="contact.html">Contact</a>
