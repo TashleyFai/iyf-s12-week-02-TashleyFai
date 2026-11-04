@@ -3,12 +3,11 @@
 const menuIcon = document.querySelector(".menu-icon");
 const siteNav = document.querySelector(".site-nav");
 
-menuIcon.addEventListener("click", function () {
+if (menuIcon && siteNav) {
+    menuIcon.addEventListener("click", function () {
+        siteNav.classList.toggle("active");
 
-    siteNav.classList.toggle("active");
-
-    const isOpen = siteNav.classList.contains("active");
-
-    menuIcon.setAttribute("aria-expanded", isOpen);
-
-});
+        const isOpen = siteNav.classList.contains("active");
+        menuIcon.setAttribute("aria-expanded", isOpen);
+    });
+}
