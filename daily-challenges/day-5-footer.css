@@ -1,0 +1,102 @@
+/* Day 5: Responsive Footer Design */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+main {
+    min-height: 300px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+main h1 {
+    color: #243b64;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background-color: #243b64;
+    color: white;
+    padding: 50px 30px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.footer-column h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-column p {
+    margin-bottom: 10px;
+    color: #e0e6f0;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #e0e6f0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #607493;
+    margin-top: 35px;
+    padding-top: 20px;
+    color: #e0e6f0;
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        padding: 35px 20px 20px;
+    }
+}
