@@ -1,0 +1,95 @@
+/* Day 1: Button Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    padding: 30px;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #243b64;
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+main h2 {
+    margin-bottom: 25px;
+}
+
+.btn {
+    padding: 12px 22px;
+    margin: 8px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Primary Button */
+.btn-primary {
+    background-color: #243b64;
+    color: white;
+    border: 2px solid #243b64;
+}
+
+.btn-primary:hover {
+    background-color: #162746;
+    transform: translateY(-2px);
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background-color: transparent;
+    color: #243b64;
+    border: 2px solid #243b64;
+}
+
+.btn-secondary:hover {
+    background-color: #243b64;
+    color: white;
+}
+
+/* Danger Button */
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: 2px solid #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #a71d2a;
+}
+
+/* Disabled Button */
+.btn-disabled {
+    background-color: #cccccc;
+    color: #777777;
+    border: 2px solid #cccccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.btn-disabled:hover {
+    transform: none;
+}
