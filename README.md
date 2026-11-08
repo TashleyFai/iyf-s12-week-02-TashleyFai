@@ -39,6 +39,18 @@ CSS Features
 - Keyboard focus styles for accessibility.
 - Responsive image sizing.
 
+## Daily CSS Challenges
+
+Completed five daily CSS challenges:
+
+- [Day 1: Button Styles](daily-challenges/day-1-buttons.html)
+- [Day 2: Card Component](daily-challenges/day-2-card.html)
+- [Day 3: Hero Section](daily-challenges/day-3-hero.html)
+- [Day 4: Form Styling](daily-challenges/day-4-form.html)
+- [Day 5: Footer Design](daily-challenges/day-5-footer.html)
+
+See the [Daily Challenges README](daily-challenges/README.md) for details.
+
 Technologies Used
 
 - HTML5
